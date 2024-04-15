@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CSE 160 Assignment 0</title>
+        <script src="../lib/cuon-matrix-cse160.js"></script>
+    </head>
+
+    <body onload="main()">
+        <table>
+            <tr><td>Meghana Bellam</td></tr>
+            <tr><td>mbellam@ucsc.edu</td></tr>
+            <tr><td>Notes to Grader: </td></tr>
+            <tr><td>None </td></tr>
+        </table>
+        <canvas id="canvas1" width="400" height="400"> 
+        </canvas>
+        <form id="myForm" onsubmit="return drawFromInput()">
+            <table>
+                <tr>
+                    <td><label for="xvalue">v1: x:</label></td>
+                    <td><input type="text" id="xvalue" name="xvalue"></td>
+                    <td><label for="yvalue">y:</label></td>
+                    <td><input type="text" id="yvalue" name="yvalue"></td>
+                </tr>
+                <tr>
+                    <td><label for="x2value">v2: x:</label></td>
+                    <td><input type="text" id="x2value" name="x2value"></td>
+                    <td><label for="y2value">y:</label></td>
+                    <td><input type="text" id="y2value" name="y2value"></td>
+                </tr>
+                <tr><td span=4><input type="submit" value="Draw"></td></tr>
+            </table>
+          </form>
+
+          <form id="myForm2" onsubmit="return handleDrawOperationEvent()">
+            <table>
+  
+                <tr><td span=4><label for="Operation">Operation:</label> 
+                    <select name=""Operation" id="Operation">
+                        <option value="Add">Add</option>
+                        <option value="Subtract">Subtract</option>
+                        <option value="Multiply">Multiply</option>
+                        <option value="Divide">Divide</option>
+                        <option value="Magnitude">Magnitude</option>
+                        <option value="Normalize">Normalize</option>
+                        <option value="Angle between">Angle between</option>
+                        <option value="Area">Area</option>
+                    </select>
+                    <label for="scalarvalue">Scalar:</label>
+                    <input type="text" id="scalarvalue" name="scalarvalue">
+                    </td>
+                </tr>
+                <tr><td span=4><input type="submit" value="Draw"></td></tr>
+            </table>
+          </form>
+        <script src="asg0.js"></script>
+    </body>
+</html>
